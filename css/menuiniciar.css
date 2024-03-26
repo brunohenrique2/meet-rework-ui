@@ -90,6 +90,7 @@ main {
     position: absolute;
     bottom: 3vh;
     left: 5vw;
+    box-shadow: -5px 8px 15px #00000099;
 }
 
 .meetFunctions {
