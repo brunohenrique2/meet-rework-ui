@@ -4,15 +4,15 @@
     box-sizing: border-box;
 }
 
-.material-symbols-outlined {
+.material-symbols-rounded {
     font-variation-settings:
     'FILL' 1
 }
 
 :root {
-    --color1: rgb(0, 0, 0);
-    --color2: rgb(10, 14, 26);
-    --color3: rgba(32, 32, 32, 0.6);
+    --color1: #000000;
+    --color2: #0a0e1a;
+    --color3: #20202099;
     --google-logo-color-blue: #4285f4;
     --google-logo-color-green: #34a853;
     --google-logo-color-yellow: #fbbc05;
@@ -53,6 +53,10 @@ main {
     color: white;
 }
 
+#btnBack:hover {
+    cursor: pointer;
+}
+
 #titleMenu {
     background-color: var(--color3);
     color: white;
@@ -74,6 +78,10 @@ main {
     top: 15px;
 }
 
+#titleMenu:hover {
+    cursor: pointer;
+}
+
 #dockerMeetOptions {
     background-color: var(--color3);
     height: 60px;
@@ -87,21 +95,31 @@ main {
 .meetFunctions {
     display: flex;
     justify-content: center;
-    background-color: white;
+    background-color: #1b1b1b99;
+    color: white;
     padding: 8px;
     border-radius: 50%;
+    box-shadow: -5px 8px 15px #00000099;
 }
 
+.meetFunctions:hover {
+    cursor: pointer;
+}
+
+
 #callEnd {
-    background-color: rgb(217, 39, 39);
+    background-color: var(--google-logo-color-red);
     height: 80px;
     width: 80px;
     color: white;
-    font-size: 50px;
+    font-size: 60px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    
+}
+
+#callEnd:hover {
+    cursor: pointer;
 }
 
