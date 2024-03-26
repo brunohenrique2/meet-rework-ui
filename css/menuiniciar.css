@@ -10,9 +10,13 @@
 }
 
 :root {
-    --backcolor1: rgb(0, 0, 0);
-    --backcolor2: rgb(10, 14, 26);
-    --backcolor3: rgba(32, 32, 32, 0.6);
+    --color1: rgb(0, 0, 0);
+    --color2: rgb(10, 14, 26);
+    --color3: rgba(32, 32, 32, 0.6);
+    --google-logo-color-blue: #4285f4;
+    --google-logo-color-green: #34a853;
+    --google-logo-color-yellow: #fbbc05;
+    --google-logo-color-red: #ea4335;
 }
 
 .flex {
@@ -24,7 +28,10 @@
 body {
     width: 100vw;
     height: 100vh;
-    background-color: var(--backcolor2);
+    background-image: url(../img/wallpaper.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 header {
@@ -47,7 +54,7 @@ main {
 }
 
 #titleMenu {
-    background-color: var(--backcolor3);
+    background-color: var(--color3);
     color: white;
     padding: 15px;
     border-radius: 15px;
@@ -68,7 +75,7 @@ main {
 }
 
 #dockerMeetOptions {
-    background-color: var(--backcolor3);
+    background-color: var(--color3);
     height: 60px;
     width: 90vw;
     border-radius: 20px;
