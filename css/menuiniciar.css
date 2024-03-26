@@ -97,10 +97,11 @@ main {
     height: 80px;
     width: 80px;
     color: white;
-}
-
-#callEnd span {
     font-size: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     
 }
 
