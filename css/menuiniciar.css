@@ -10,6 +10,7 @@
 }
 
 :root {
+    --color0: #ffffff;
     --color1: #000000;
     --color2: #0a0e1a;
     --color3: #20202099;
@@ -105,12 +106,9 @@ main {
 }
 
 .meetFunctions:hover {
+    background-color: #11111199;
+    color: var(--color0);
     cursor: pointer;
-}
-
-.meetFunctions:active {
-    background-color: white;
-    color: black;
 }
 
 #callEnd {
@@ -128,5 +126,10 @@ main {
 
 #callEnd:hover {
     cursor: pointer;
+}
+
+.active {
+    background-color: var(--color0);
+    color: var(--color1);
 }
 
