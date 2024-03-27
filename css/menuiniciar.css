@@ -66,6 +66,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    box-shadow: -5px 8px 15px #00000069;
 }
 
 #titleMenu::after {
@@ -118,6 +119,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: -5px 8px 15px #00000099;
 }
 
 #callEnd:hover {
