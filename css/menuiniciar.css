@@ -106,8 +106,8 @@ main {
 }
 
 .meetFunctions:hover {
-    background-color: #11111199;
-    color: var(--color0);
+    /*background-color: #11111199;
+    color: var(--color0);*/
     cursor: pointer;
 }
 

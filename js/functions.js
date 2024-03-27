@@ -1,8 +1,7 @@
-const dockerMeetOptions = document.getElementById("dockerMeetOptions")
-var options = dockerMeetOptions.getElementsByTagName("meetFunctions")
+let meetFunctions = document.querySelectorAll(".meetFunctions")
 
-for(var i = 0; i < options.length; i++) {
-    options[i].addEventListener("click", () => {
-
+for(let i = 0; i < meetFunctions.length; i++) {
+    meetFunctions[i].addEventListener("click", () => {
+      meetFunctions[i].classList.toggle("active")
     })
 }
