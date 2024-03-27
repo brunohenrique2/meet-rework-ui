@@ -108,13 +108,17 @@ main {
     cursor: pointer;
 }
 
+.meetFunctions:active {
+    background-color: white;
+    color: black;
+}
 
 #callEnd {
     background-color: var(--google-logo-color-red);
     height: 80px;
     width: 80px;
     color: white;
-    font-size: 60px;
+    font-size: 40px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
