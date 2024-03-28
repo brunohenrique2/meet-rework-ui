@@ -29,6 +29,7 @@
 body {
     width: 100vw;
     height: 100vh;
+    background-color: var(--color2);
     background-image: url(../img/wallpaper.jpeg);
     background-position: center;
     background-repeat: no-repeat;
@@ -86,7 +87,7 @@ main {
     cursor: pointer;
 }
 
-#dockerMeetOptions {
+#dockerMeetFunctions {
     background-color: var(--color3);
     height: 60px;
     width: 90vw;
@@ -133,5 +134,33 @@ main {
 .active {
     background-color: var(--color0);
     color: var(--color1);
+}
+
+#dockerOptions {
+    display: none;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-flow: wrap;
+    gap: 20px;
+    background-color: var(--color3);
+    backdrop-filter: blur(5px);
+    height: 320px;
+    width: 320px;
+    border: none;
+    border-radius: 15px;
+    padding: 20px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: -5px 8px 15px #00000099;
+}
+
+#dockerOptions .options {
+    height: 80px;
+    width: 80px;
+    background-color: var(--color3);
+    border-radius: 10px;
+    box-shadow: -5px 8px 15px #00000069;
 }
 
