@@ -139,28 +139,42 @@ main {
 #dockerOptions {
     display: none;
     justify-content: flex-start;
+    align-items: center;
     flex-direction: row;
     flex-flow: wrap;
-    gap: 20px;
+    gap: 10px;
     background-color: var(--color3);
     backdrop-filter: blur(5px);
-    height: 320px;
-    width: 320px;
+    height: 350px;
+    width: 350px;
     border: none;
     border-radius: 15px;
-    padding: 20px;
+    padding: 10px;
     position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    bottom: calc(-100% + 450px);
+    margin: auto;
     box-shadow: -5px 8px 15px #00000099;
 }
 
 #dockerOptions .options {
-    height: 80px;
-    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100px;
+    width: 100px;
     background-color: var(--color3);
+    color: #cccccc;
+    gap: 10px;
+    padding: 5px;
     border-radius: 10px;
     box-shadow: -5px 8px 15px #00000069;
 }
 
+#dockerOptions .options span {
+    font-size: 40px;
+}
+
+#dockerOptions .options p {
+    text-align: center;
+}
