@@ -176,3 +176,49 @@ main {
 #dockerOptions .options p {
     text-align: center;
 }
+
+#userView {
+    background-color: var(--color3);
+    height: 180px;
+    width: 120px;
+    border-radius: 20px;
+    position: absolute;
+    right: 5vw;
+    bottom: 100px;
+}
+
+#userView #userHand {
+    background-color: var(--color0);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 10px;
+    left: 10px;
+}
+
+#userView #floatScreenResizer {
+    background-color: var(--color3);
+    color: var(--color0);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    right: -85px;
+    bottom: -50px;
+}
+
+#userView #userImage {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    position: relative;
+    top: 30px;
+    left: 30px;
+}
