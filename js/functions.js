@@ -5,6 +5,7 @@ let btnOptions = document.getElementById("moreOptions")
 let userView = document.getElementById("userView")
 let userHand = document.getElementById("userHand")
 let userHandCallBack = document.getElementById("userHandCallBack")
+let userImage = document.getElementById("userImage")
 let floatScreenResizer = document.getElementById("floatScreenResizer")
 
 for(let i = 0; i < meetFunctions.length; i++) {
@@ -55,5 +56,13 @@ floatScreenResizer.addEventListener("touchend", () => {
     userView.classList.toggle("resize0")
 })
 
+function resizer() {
+    userImage.addEventListener("touchend", () => {
+        floatScreenResizer.style.visibility = "visible"
+        console.log("click")
+    })
+}
+
+setInterval(resizer(), 500)
 
 
