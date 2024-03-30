@@ -187,13 +187,16 @@ main {
     position: absolute;
     right: 5vw;
     bottom: 100px;
-    transition: .6s;
+    transition: .5s;
+    overflow: hidden;
 }
 
 #userView.resize0 {
     height: 60px;
     width: 60px;
-    visibility: hidden;
+    padding: 0;
+    border-radius: 50%;
+    display: block;
 }
 
 #userHandBox {
