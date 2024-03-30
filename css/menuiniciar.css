@@ -108,6 +108,11 @@ main {
     box-shadow: -5px 8px 15px #00000099;
 }
 
+.meetFunctions.active {
+    background-color: var(--color0);
+    color: var(--color1);
+}
+
 .meetFunctions:hover {
     /*background-color: #11111199;
     color: var(--color0);*/
@@ -129,11 +134,6 @@ main {
 
 #callEnd:hover {
     cursor: pointer;
-}
-
-.active {
-    background-color: var(--color0);
-    color: var(--color1);
 }
 
 #dockerOptions {
@@ -187,6 +187,13 @@ main {
     position: absolute;
     right: 5vw;
     bottom: 100px;
+    transition: .6s;
+}
+
+#userView.resize0 {
+    height: 60px;
+    width: 60px;
+    visibility: hidden;
 }
 
 #userHandBox {
@@ -232,3 +239,4 @@ main {
     height: 60px;
     border-radius: 50%;
 }
+

@@ -2,8 +2,10 @@ let meetFunctions = document.querySelectorAll(".meetFunctions")
 let camera = document.querySelector("#videocam")
 let dockerOptions = document.getElementById("dockerOptions")
 let btnOptions = document.getElementById("moreOptions")
+let userView = document.getElementById("userView")
 let userHand = document.getElementById("userHand")
 let userHandCallBack = document.getElementById("userHandCallBack")
+let floatScreenResizer = document.getElementById("floatScreenResizer")
 
 for(let i = 0; i < meetFunctions.length; i++) {
     meetFunctions[i].addEventListener("touchend", () => {
@@ -33,8 +35,6 @@ for(let i = 0; i < meetFunctions.length; i++) {
 
 }
 
-console.log(dockerOptions.style.display)
-
 btnOptions.addEventListener("touchend", () => {
     if(dockerOptions.style.display == "") {
         dockerOptions.style.display = "flex"
@@ -49,6 +49,10 @@ userHand.addEventListener("touchend", () => {
     }else if(userHandCallBack.style.display == "flex") {
         userHandCallBack.style.display = ""
     }
+})
+
+floatScreenResizer.addEventListener("touchend", () => {
+    userView.classList.toggle("resize0")
 })
 
 
