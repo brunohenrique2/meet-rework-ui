@@ -2,6 +2,8 @@ let meetFunctions = document.querySelectorAll(".meetFunctions")
 let camera = document.querySelector("#videocam")
 let dockerOptions = document.getElementById("dockerOptions")
 let btnOptions = document.getElementById("moreOptions")
+let userHand = document.getElementById("userHand")
+let userHandCallBack = document.getElementById("userHandCallBack")
 
 for(let i = 0; i < meetFunctions.length; i++) {
     meetFunctions[i].addEventListener("touchend", () => {
@@ -38,6 +40,14 @@ btnOptions.addEventListener("touchend", () => {
         dockerOptions.style.display = "flex"
     }else if(dockerOptions.style.display == "flex") {
         dockerOptions.style.display = ""
+    }
+})
+
+userHand.addEventListener("touchend", () => {
+    if(userHandCallBack.style.display == "") {
+        userHandCallBack.style.display = "flex"
+    }else if(userHandCallBack.style.display == "flex") {
+        userHandCallBack.style.display = ""
     }
 })
 

@@ -181,22 +181,39 @@ main {
     height: 180px;
     width: 120px;
     border-radius: 20px;
+    padding: 10px;
+    display: grid;
+    grid-template-rows: 1fr 3fr 1fr;
     position: absolute;
     right: 5vw;
     bottom: 100px;
 }
 
-#userView #userHand {
+#userHandBox {
+    display: flex;
+    align-items: center;
+}
+
+#userImageBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#floatScreenResizerBox {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#userView #userHandCallBack {
     background-color: var(--color0);
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
-    position: relative;
-    top: 10px;
-    left: 10px;
 }
 
 #userView #floatScreenResizer {
@@ -208,16 +225,10 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
-    right: -85px;
-    bottom: -50px;
 }
 
 #userView #userImage {
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    position: relative;
-    top: 30px;
-    left: 30px;
 }
