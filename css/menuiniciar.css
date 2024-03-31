@@ -191,6 +191,10 @@ main {
     overflow: hidden;
 }
 
+#userView #mic, #userView #videocam {
+    display: none;
+}
+
 #userView.resize0 {
     height: 60px;
     width: 60px;
@@ -206,10 +210,35 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+#userView.resize1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    width: 160px;
+    border-radius: 30px;
+    padding: 0;
+}
+
+#userView.resize1 #userImage {
+    margin: -10px;
+}
+
+#userView.resize1 #mic, #userView.resize1 #videocam {
+    display: block;
+    background-color: none;
+}
+
+#userView.resize1 #floatScreenResizer {
+    visibility: visible;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    right: 0px;
 }
 
 #userHandBox {
@@ -258,20 +287,4 @@ main {
 
 #userImageBox #videocam2, #mic2{
     display: none;
-}
-
-#userImageBox #floatScreenResizer2 {
-    visibility: hidden;
-    background-color: var(--color3);
-    color: var(--color0);
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }

@@ -53,16 +53,17 @@ userHand.addEventListener("touchend", () => {
 })
 
 floatScreenResizer.addEventListener("touchend", () => {
-    userView.classList.toggle("resize0")
+    if(floatScreenResizer.innerHTML == "fullscreen_exit") {
+        floatScreenResizer.innerHTML = "fullscreen"
+        userView.classList.add("resize0")
+
+    }else if(floatScreenResizer.innerHTML == "fullscreen") {
+        floatScreenResizer.innerHTML = "fullscreen_exit"
+        userView.classList.remove("resize1")
+    }
 })
 
-function resizer() {
-    userImage.addEventListener("touchend", () => {
-        floatScreenResizer.style.visibility = "visible"
-        console.log("click")
-    })
-}
-
-setInterval(resizer(), 500)
-
-
+userImage.addEventListener("touchend", () => {
+    userView.classList.remove("resize0")
+    userView.classList.add("resize1")
+})
