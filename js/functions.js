@@ -45,7 +45,7 @@ btnOptions.addEventListener("touchend", () => {
 })
 
 userHand.addEventListener("touchend", () => {
-    if(userHandCallBack.style.display == "") {
+    if(userHandCallBack.style.display == "" && userView.className == "") {
         userHandCallBack.style.display = "flex"
     }else if(userHandCallBack.style.display == "flex") {
         userHandCallBack.style.display = ""
