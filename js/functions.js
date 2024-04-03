@@ -25,15 +25,6 @@ for(let i = 0; i < meetFunctions.length; i++) {
         }
         console.log("pressionou!")
     })
-
-    meetFunctions[i].addEventListener("touchstart", () => {
-        console.log("pressionando...")
-    })
-
-    meetFunctions[i].addEventListener("touchmove", () => {
-        console.log("movendo...")
-    })
-
 }
 
 btnOptions.addEventListener("touchend", () => {
@@ -64,6 +55,10 @@ floatScreenResizer.addEventListener("touchend", () => {
 })
 
 userImage.addEventListener("touchend", () => {
-    userView.classList.remove("resize0")
-    userView.classList.add("resize1")
+    if(userView.className == "resize0") {
+        userView.classList.remove("resize0")
+        userView.classList.add("resize1")
+    }
+
 })
+
