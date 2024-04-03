@@ -6,7 +6,6 @@ const move = (e) => {
 userView.addEventListener("mousedown", (e) => {
     offSetX = e.clientX - userView.offsetLeft
     offSetY = e.clientY - userView.offsetTop
-    userView.style.transitionDuration = "0.1s"
     document.addEventListener("mousemove", move)
     console.log("pressionando...")
 })

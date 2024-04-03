@@ -187,7 +187,7 @@ main {
     position: absolute;
     right: 5vw;
     bottom: 100px;
-    transition: .5s;
+    transition: .2s;
     overflow: hidden;
 }
 
