@@ -1,12 +1,12 @@
-let meetFunctions = document.querySelectorAll(".meetFunctions")
-let camera = document.querySelector("#videocam")
-let dockerOptions = document.getElementById("dockerOptions")
-let btnOptions = document.getElementById("moreOptions")
-let userView = document.getElementById("userView")
-let userHand = document.getElementById("userHand")
-let userHandCallBack = document.getElementById("userHandCallBack")
-let userImage = document.getElementById("userImage")
-let floatScreenResizer = document.getElementById("floatScreenResizer")
+const meetFunctions = document.querySelectorAll(".meetFunctions")
+const camera = document.querySelector("#videocam")
+const dockerOptions = document.getElementById("dockerOptions")
+const btnOptions = document.getElementById("moreOptions")
+const userView = document.getElementById("userView")
+const userHand = document.getElementById("userHand")
+const userHandCallBack = document.getElementById("userHandCallBack")
+const userImage = document.getElementById("userImage")
+const floatScreenResizer = document.getElementById("floatScreenResizer")
 
 for(let i = 0; i < meetFunctions.length; i++) {
     meetFunctions[i].addEventListener("touchend", () => {

@@ -1,17 +1,20 @@
+let offSetX
+let offSetY
+
 const move = (e) => {
-    userView.style.left = `${e.clientX - offSetX}px`
-    userView.style.top = `${e.clientY - offSetY}px`
+    userView.style.left = `${e.touches[0].clientX - offSetX}px`
+    userView.style.top = `${e.touches[0].clientY - offSetY}px`
+    userView.style.transitionDuration = "0s"
 }
 
-userView.addEventListener("mousedown", (e) => {
-    offSetX = e.clientX - userView.offsetLeft
-    offSetY = e.clientY - userView.offsetTop
-    document.addEventListener("mousemove", move)
-    userView.style.transitionDuration = "0s"
-    console.log("pressionando...")
+userView.addEventListener("touchstart", (e) => {
+    offSetX = e.touches[0].clientX - userView.offsetLeft
+    offSetY = e.touches[0].clientY - userView.offsetTop
+    document.addEventListener("touchmove", move)
+
 })
 
-document.addEventListener("mouseup", () => {
+document.addEventListener("touchend", () => {
     userView.style.transitionDuration = ".3s"
-    document.removeEventListener("mousemove", move)
+    document.removeEventListener("touchend", move)
 })
