@@ -2,14 +2,14 @@ let offSetX
 let offSetY
 
 const move = (e) => {
-    userView.style.left = `${e.touches[0].clientX - offSetX}px`
-    userView.style.top = `${e.touches[0].clientY - offSetY}px`
+    userView.style.left = `${e.targetTouches[0].clientX - offSetX}px`
+    userView.style.top = `${e.targetTouches[0].clientY - offSetY}px`
     userView.style.transitionDuration = "0s"
 }
 
 userView.addEventListener("touchstart", (e) => {
-    offSetX = e.touches[0].clientX - userView.offsetLeft
-    offSetY = e.touches[0].clientY - userView.offsetTop
+    offSetX = e.targetTouches[0].clientX - userView.offsetLeft
+    offSetY = e.targetTouches[0].clientY - userView.offsetTop
     document.addEventListener("touchmove", move)
 
 })
