@@ -10,11 +10,11 @@ const move = (e) => {
 userView.addEventListener("touchstart", (e) => {
     offSetX = e.targetTouches[0].clientX - userView.offsetLeft
     offSetY = e.targetTouches[0].clientY - userView.offsetTop
-    document.addEventListener("touchmove", move)
+    userView.addEventListener("touchmove", move)
 
 })
 
 document.addEventListener("touchend", () => {
     userView.style.transitionDuration = ".3s"
-    document.removeEventListener("touchend", move)
+    userView.removeEventListener("touchend", move)
 })

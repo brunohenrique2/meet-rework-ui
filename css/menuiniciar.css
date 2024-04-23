@@ -27,7 +27,7 @@ body {
     width: 100vw;
     height: 100vh;
     background-color: var(--background-color0);
-    /*background-image: url(../img/wallpaper.jpeg);*/
+    background-image: url(../img/wallpaper.jpeg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -127,17 +127,17 @@ main {
 #dockerOptions {
     visibility: hidden;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     flex-direction: row;
     flex-flow: wrap;
     gap: 10px;
     position: absolute;
-    left: 2vh;
+    left: 3vw;
     bottom: calc(80px + 3vh);
     background-color: var(--background-color2);
     height: 0px;
-    width: 350px;
+    width: 94vw;
     padding: 10px;
     border-radius: 15px;
     box-shadow: -5px 8px 15px var(--box-shadow-color);
@@ -158,7 +158,6 @@ main {
     height: 100px;
     width: 100px;
     color: #cccccc;
-    gap: 10px;
     border-radius: 10px;
 }
 
@@ -177,7 +176,7 @@ main {
     border-radius: 20px;
     padding: 10px;
     display: grid;
-    grid-template-rows: 1fr 3fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -215,10 +214,11 @@ main {
     width: 160px;
     border-radius: 30px;
     padding: 0;
+    padding-left: 10px;
 }
 
 #userView.resize1 #userImage {
-    margin: -10px;
+    margin: -5px;
 }
 
 #userView.resize1 #mic, #userView.resize1 #videocam {
@@ -230,8 +230,6 @@ main {
     visibility: visible;
     width: 60px;
     height: 60px;
-    display: flex;
-    align-items: center;
     position: absolute;
     right: 0px;
 }
