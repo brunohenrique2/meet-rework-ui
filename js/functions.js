@@ -28,11 +28,7 @@ for(let i = 0; i < meetFunctions.length; i++) {
 }
 
 btnOptions.addEventListener("touchend", () => {
-    if(dockerOptions.style.display == "") {
-        dockerOptions.style.display = "flex"
-    }else if(dockerOptions.style.display == "flex") {
-        dockerOptions.style.display = ""
-    }
+    dockerOptions.classList.toggle("active")
 })
 
 userHand.addEventListener("touchend", () => {

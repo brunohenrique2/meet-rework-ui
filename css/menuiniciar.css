@@ -13,27 +13,25 @@
     --color0: #ffffff;
     --color1: #000000;
     --color2: #0a0e1a;
-    --color3: #10101099;
-    --google-logo-color-blue: #4285f4;
+    --background-color0: hsl(225, 45%, 5%);
+    --background-color1: hsla(225, 15%, 5%, 0.6);
+    --background-color2: hsla(225, 15%, 5%, 0.8);
+    --box-shadow-color: #00000099;
+    --google-logo-color-blue: #4387f4;
     --google-logo-color-green: #34a853;
     --google-logo-color-yellow: #fbbc05;
     --google-logo-color-red: #ea4335;
 }
 
-.flex {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
 body {
     width: 100vw;
     height: 100vh;
-    background-color: var(--color2);
-    background-image: url(../img/wallpaper.jpeg);
+    background-color: var(--background-color0);
+    /*background-image: url(../img/wallpaper.jpeg);*/
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    overflow: hidden;
 }
 
 header {
@@ -47,35 +45,32 @@ header {
 
 main {
     height: calc(100vh - 80px);
+    overflow: hidden;
 }
 
 #btnBack {
     font-size: 50px;
     width: 50px;
     font-weight: 800;
-    color: white;
-}
-
-#btnBack:hover {
-    cursor: pointer;
+    color: var(--color0);
 }
 
 #titleMenu {
     font-size: 20px;
-    background-color: var(--color3);
-    color: white;
+    background-color: var(--background-color1);
+    color: var(--color0);
     padding: 15px;
     border-radius: 15px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    box-shadow: -5px 8px 15px #00000069;
+    box-shadow: -5px 8px 15px var(--box-shadow-color);
 }
 
 #titleMenu::after {
     content: '';
-    background-color: white;
+    background-color: var(--color0);
     width: 50px;
     height: 5px;
     border-radius: 5px;
@@ -83,29 +78,28 @@ main {
     top: 15px;
 }
 
-#titleMenu:hover {
-    cursor: pointer;
-}
-
 #dockerMeetFunctions {
-    background-color: var(--color3);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--background-color1);
     height: 60px;
     width: 90vw;
     border-radius: 20px;
     position: absolute;
     bottom: 3vh;
     left: 5vw;
-    box-shadow: -5px 8px 15px #00000099;
+    box-shadow: -5px 8px 15px var(--box-shadow-color);
 }
 
 .meetFunctions {
     display: flex;
     justify-content: center;
-    background-color: #1b1b1b99;
-    color: white;
+    background-color: var(--background-color2);
+    color: var(--color0);
     padding: 8px;
     border-radius: 50%;
-    box-shadow: -5px 8px 15px #00000099;
+    box-shadow: -5px 8px 15px var(--box-shadow-color);
 }
 
 .meetFunctions.active {
@@ -113,23 +107,17 @@ main {
     color: var(--color1);
 }
 
-.meetFunctions:hover {
-    /*background-color: #11111199;
-    color: var(--color0);*/
-    cursor: pointer;
-}
-
 #callEnd {
     background-color: var(--google-logo-color-red);
     height: 80px;
     width: 80px;
-    color: white;
+    color: var(--color0);
     font-size: 50px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: -5px 8px 15px #00000099;
+    box-shadow: -5px 8px 15px var(--box-shadow-color);
 }
 
 #callEnd:hover {
@@ -137,23 +125,29 @@ main {
 }
 
 #dockerOptions {
-    display: none;
+    visibility: hidden;
+    display: flex;
     justify-content: flex-start;
     align-items: center;
     flex-direction: row;
     flex-flow: wrap;
     gap: 10px;
-    background-color: var(--color3);
-    backdrop-filter: blur(5px);
-    height: 350px;
+    position: absolute;
+    left: 2vh;
+    bottom: calc(80px + 3vh);
+    background-color: var(--background-color2);
+    height: 0px;
     width: 350px;
-    border: none;
-    border-radius: 15px;
     padding: 10px;
-    position: relative;
-    bottom: calc(-100% + 450px);
-    margin: auto;
-    box-shadow: -5px 8px 15px #00000099;
+    border-radius: 15px;
+    box-shadow: -5px 8px 15px var(--box-shadow-color);
+    overflow: hidden;
+    transition: .3s;
+}
+
+#dockerOptions.active {
+    visibility: visible;
+    height: 350px;
 }
 
 #dockerOptions .options {
@@ -177,7 +171,7 @@ main {
 }
 
 #userView {
-    background-color: var(--color3);
+    background-color: var(--background-color1);
     height: 180px;
     width: 120px;
     border-radius: 20px;
@@ -185,8 +179,9 @@ main {
     display: grid;
     grid-template-rows: 1fr 3fr 1fr;
     position: absolute;
-    right: 5vw;
-    bottom: 100px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     transition: .3s;
     overflow: hidden;
 }
@@ -269,7 +264,7 @@ main {
 }
 
 #userView #floatScreenResizer {
-    background-color: var(--color3);
+    background-color: var(--background-color1);
     color: var(--color0);
     width: 30px;
     height: 30px;
